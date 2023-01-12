@@ -36,10 +36,10 @@ contactForm.addEventListener('submit', (event) =>{
 
     if(!formData.name || !formData.email || !formData.phone || !formData.password){
 
-        const nameRegex = /^[a-zA-Z ]+$/.test('  ');
-        const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        const phoneRegex = /^((\+)33|0|0033)[1-9](\d{2}){4}$/g;
-        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+        const nameRegex = /^[a-z0-9]{MIN_CHARS,MAX_CHARS}$/i;
+        const emailRegex = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
+        const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&_])[A-Za-z\d$@$!%*?&_]{minlength,maxlength}$/;
         
         //Test le nom
         if(!formData.name || !nameRegex.test(formData.name)){
@@ -62,7 +62,7 @@ contactForm.addEventListener('submit', (event) =>{
             errorPassword.style.display = 'block';
         }
     }
-    
+
     if (!Object.values(errors).includes(true)) {
         console.log(formData)
     }
