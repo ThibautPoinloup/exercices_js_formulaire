@@ -22,7 +22,6 @@
 
 .form_section{
     display: flex;
-    flex-direction:;
     justify-content: center;
     flex-wrap: wrap;
 }
