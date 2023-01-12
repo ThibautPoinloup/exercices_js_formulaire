@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercice 1 formulaire JS</title>
 </head>
 <body>
-    
+    <form class="form" id="contactForm">
+        <div class="form_section">
+            <div>
+                <input type="text" class="form_input" name="name" id="name" placeholder="Nom">
+                <label for="name" class="error_message" id="errorName">Veuillez renseigner un nom</label>
+            </div>
+            <div>
+                <input type="email" class="form_input" name="email" id="email" placeholder="email@email.com">
+                <label for="email" class="error_message" id="errorEmail">Veuillez renseigner un email valide</label>
+            </div>
+            <div>
+                <input type="number" class="form_input" name="phone" id="phone" placeholder="06 12 34 56 78 ">
+                <label for="phone" class="error_message" id="errorPhone">Veuillez renseigner un numéro valide</label>
+            </div>
+            <div>
+                <input type="password" class="form_input" name="password" id="password" placeholder="">
+                <label for="" class="error_message" id="errorPassword">Veuillez renseigner un mot de passe</label>
+            </div>
+        </div>
+    </form>      
 </body>
 </html>
