@@ -16,7 +16,6 @@ contactForm.addEventListener('submit', (event) =>{
         phone: phoneInput.value,
         password: passwordInput.value,
     }
-
     const errors = {
         name: false,
         email: false,
@@ -60,6 +59,7 @@ contactForm.addEventListener('submit', (event) =>{
         if(!formData.password || !passwordRegex.test(formData.password)){
             errors.password = true;
             errorPassword.style.display = 'block';
+
         }
     }
 
