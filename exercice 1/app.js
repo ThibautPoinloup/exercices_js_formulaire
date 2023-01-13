@@ -58,7 +58,7 @@ contactForm.addEventListener('submit', (event) =>{
         }
 
         if(!formData.password || !passwordRegex.test(formData.password)){
-            errors.name = true;
+            errors.password = true;
             errorPassword.style.display = 'block';
         }
     }
