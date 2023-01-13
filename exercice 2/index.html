@@ -7,6 +7,30 @@
     <title>exercice 2</title>
 </head>
 <body>
-    
+    <form class="form" id="form">
+        <div class="form__section">
+            <label id="nameError" data-error="false" data-message="Veuillez renseigner votre nom complet." class="form__label">
+                <input class="form__input" type="text" name="name" id="nameInput" placeholder="Nom">
+            </label>
+            <label id="adresseError" data-error="false" data-message="Veuillez renseigner une adresse valide" class="form__label">
+                <input class="form__input" type="text" name="adresse" id="adresseInput" placeholder="Adresse">
+            </label>
+        </label>
+        <label id="optionError" data-error="false" data-message="Veuillez renseigner une option" class="form__label">
+            <select name="pizza" id="pizza" aria-placeholder="séléctioner la pizza">
+                <option value="true">Petite pizza</option>
+                <option value="true">Moyenne pizza</option>
+                <option value="true">Grande pizza</option>
+            </select>
+            <p class="price" id="price">TOTAL :</p>
+        </label>
+
+        <label id="textError" data-error="false" data-message="Veuillez ajouter un commentaire">
+            <textarea name="text" id="text" placeholder="Ajoutez un commentaire"></textarea>
+        </label>
+
+        </div>
+        <button class="form__submit" type="submit">Submit</button>
+    </form>
 </body>
 </html>
