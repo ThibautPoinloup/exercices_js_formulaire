@@ -1,36 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exercice 2</title>
+    <link rel="stylesheet" href="../exercice 2/style.css">
 </head>
 <body>
-    <form class="form" id="form">
+    <form action="#">
         <div class="form__section">
-            <label id="nameError" data-error="false" data-message="Veuillez renseigner votre nom complet." class="form__label">
-                <input class="form__input" type="text" name="name" id="nameInput" placeholder="Nom">
-            </label>
-            <label id="adresseError" data-error="false" data-message="Veuillez renseigner une adresse valide" class="form__label">
-                <input class="form__input" type="text" name="adresse" id="adresseInput" placeholder="Adresse">
-            </label>
-        </label>
-        <label id="optionError" data-error="false" data-message="Veuillez renseigner une option" class="form__label">
-            <select name="pizza" id="pizza" aria-placeholder="séléctioner la pizza">
-                <option value="true">Petite pizza</option>
-                <option value="true">Moyenne pizza</option>
-                <option value="true">Grande pizza</option>
-            </select>
-            <p class="price" id="price">TOTAL :</p>
-        </label>
-
-        <label id="textError" data-error="false" data-message="Veuillez ajouter un commentaire">
-            <textarea name="text" id="text" placeholder="Ajoutez un commentaire"></textarea>
-        </label>
-
+            <div>
+                <input class="form__input" type="text" name="firstName" id="firstName" placeholder="Firstname">
+                <label class="error-message" for="firstName" id="firstNameError">Veuillez renseigner votre prénom.</label>
+            </div>
+            <div>
+                <input class="form__input" type="text" name="lastName" id="lastName" placeholder="Lastname">
+                <label class="error-message" for="lastName" id="lastNameError">Veuillez renseigner votre nom.</label>
+            </div>
+            <div>
+                <input class="form__input" type="text" name="adress" id="adress" placeholder="Adress">
+                <label class="error-message" for="adress" id="adressError">Veuillez renseigner votre prénom.</label>
+            </div>
+            <div>
+                <input class="form__input" type="text" name="phone" id="phone" placeholder="Phone number">
+                <label class="error-message" for="phone" id="phoneError">Veuillez renseigner votre prénom.</label>
+            </div>
+            <div>
+                <select name="products" id="products">
+                    <option value="true">Choose your pizza</option>
+                    <option value="false">Margarita</option>
+                    <option value="false">Margarita</option>
+                    <option value="false">Margarita</option>
+                    <option value="false">Margarita</option>
+                </select>
+                <label class="error-message" for="products" id="productsError">Veuillez renseigner la pizza que vous voulez</label>
+            </div>
+            <div>
+                <select name="size" id="size">
+                    <option value="true">choose the size of your pizza</option>
+                    <option value="false">Small</option>
+                    <option value="false">Medium</option>
+                    <option value="false">Large</option>
+                    <option value="false">Extra Large</option>
+                </select>
+                <label class="error-message" for="phone" id="phoneError">Veuillez renseigner la taille de votre pizza</label>
+            </div>
+            <div>
+                <textarea name="comment" id="comment" placeholder="Leave a comment (facultatif)"></textarea>
+            </div>
+            <button class="submit" id="submit">Submit</button>
         </div>
-        <button class="form__submit" type="submit">Submit</button>
     </form>
+    <script src="../exercice 2/app.js"></script>
 </body>
 </html>
