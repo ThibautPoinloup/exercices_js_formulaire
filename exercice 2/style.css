@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/brick-wall-ge0e7d6a5f_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form{
+    /* min-width: 360px; */
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 8px;
+}
+
+.form__section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__section div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form__section div .form__input, .form__section div select{
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+}
+
+.error-message{
+    color: rgb(216, 0, 0);
+    text-align: center;
+    opacity: 0;
+}
+
+.form__section div textarea{
+    width: 100%;
+    height: 200px;
+    resize: vertical;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+.total{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.submit{
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    width: 150px;
+    background-color: rgb(7, 205, 175);
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border-bottom: solid 2px rgba(0, 0, 0, 0);
+
+}
+
+.submit:hover{
+    background-color: rgb(242, 122, 122);
+    border-radius: 50px;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.371);
+}
+
+
