@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exercice 2</title>
-    <link rel="stylesheet" href="../exercice 2/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <form class="form" id="form">
@@ -19,30 +19,30 @@
                 <label class="error-message" for="lastName" id="lastNameError">Veuillez renseigner votre nom.</label>
             </div>
             <div>
-                <input class="form__input" type="text" name="adress" id="adress" placeholder="Adress">
-                <label class="error-message" for="adress" id="adressError">Veuillez renseigner votre prénom.</label>
+                <input class="form__input" type="text" name="address" id="address" placeholder="Location">
+                <label class="error-message" for="address" id="addressError">Veuillez renseigner votre adresse postal.</label>
             </div>
             <div>
                 <input class="form__input" type="tel" name="phone" id="phone" placeholder="Phone number">
-                <label class="error-message" for="phone" id="phoneError">Veuillez renseigner votre prénom.</label>
+                <label class="error-message" for="phone" id="phoneError">Veuillez renseigner votre numéro de téléphone.</label>
             </div>
             <div>
                 <select name="products" id="products">
-                    <option class="optionProduct"value="true">Choose your pizza</option>
-                    <option class="optionProduct"value="false">Margarita</option>
-                    <option class="optionProduct"value="false">Margarita</option>
-                    <option class="optionProduct"value="false">Margarita</option>
-                    <option class="optionProduct"value="false">Margarita</option>
+                    <option value="1">Choose your pizza</option>
+                    <option value="2">Margarita</option>
+                    <option value="3">Pepperoni</option>
+                    <option value="4">4 formages</option>
+                    <option value="5">Napolitaine</option>
                 </select>
                 <label class="error-message" for="products" id="productsError">Veuillez renseigner la pizza que vous voulez</label>
             </div>
             <div>
                 <select name="size" id="size">
-                    <option class="optionSize" value="true">choose the size of your pizza</option>
-                    <option class="optionSize" value="false">Small</option>
-                    <option class="optionSize" value="false">Medium</option>
-                    <option class="optionSize" value="false">Large</option>
-                    <option class="optionSize" value="false">Extra Large</option>
+                    <option value="1">choose the size of your pizza</option>
+                    <option value="2">Small</option>
+                    <option value="3">Medium</option>
+                    <option value="4">Large</option>
+                    <option value="5">Extra Large</option>
                 </select>
                 <label class="error-message" for="phone" id="sizeError">Veuillez renseigner la taille de votre pizza</label>
             </div>
@@ -53,6 +53,6 @@
             <button class="submit" id="submit">Valider</button>
         </div>
     </form>
-    <script src="../exercice 2/app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
