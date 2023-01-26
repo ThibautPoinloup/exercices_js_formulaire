@@ -1,8 +1,16 @@
 const form = document.getElementById('form')
 
+let productsValid = false;
+let sizeValid = false;
+
 form.addEventListener('submit', (event) => {
-    
     event.preventDefault();
+
+    if (!productsValid || !sizeValid) {
+        console.error("Veuillez remplir le formulaire correctement.");
+    } else {
+        console.log("Envoi effectué.");
+    }
 
     const firstName = document.getElementById('firstName');
     const lastName = document.getElementById('lastName');
@@ -68,19 +76,72 @@ form.addEventListener('submit', (event) => {
             phoneError.style.display = 'block';
         }
 
-        if(formData.products == "1"){
+        if(formData.products == false){
             errors.products = true;
             productsError.style.display = 'block';
         }
 
 
-        if(formData.size == "1"){
+        if(formData.size == false){
             errors.size = true;
             sizeError.style.display = 'block';
         }
 
     }
-    
-
+    if (!Object.values(errors).includes(true)) {
+        console.log(formData)
+    }
 })
+
+const productsPrice = {
+    margarita : 5,
+    pepperoni : 6,
+    fromage : 7,
+    napolitaine : 8
+}
+
+const sizesPrice = {
+    small : 5,
+    medium : 6,
+    large : 7,
+    extra : 8
+}
+
+const productSelect = document.getElementById('products');
+const sizeSelect = document.getElementById('size');
+const total = document.getElementById('total');
+
+let totalPrice = 0;
+let sizePrice = 0;
+let productPrice = 0;
+
+productSelect.addEventListener('change', () => {
+    const productValue = productSelect.value;
+    console.log(productValue)
+
+    if(productValue && productValue.length > 0){
+        productPrice = productsPrice[productValue];
+        console.log(productPrice)
+        productsValid = true;
+    } else {
+        productPrice = 0;
+        productsValid = false;
+    }
+    total.innerHTML = `TOTAL : ${productPrice + sizePrice} €`;
+});
+
+sizeSelect.addEventListener('change', () => {
+    const sizeValue = sizeSelect.value;
+
+    if(sizeValue && sizeValue.length > 0){
+        sizePrice = sizesPrice[sizeValue];
+        sizeValid = true;
+    } else {
+        sizePrice = 0;
+        sizeValid = false;
+    }
+    total.innerHTML = `TOTAL : ${productPrice + sizePrice} €`;
+})
+
+
 
